@@ -1,0 +1,225 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="Logo.png">
+
+
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+      
+        
+      
+         <style>
+
+            #storydiv { 
+                height: 100%;
+                position: relative;         
+              }
+                      
+            #storydiv p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            
+            .maindiv{
+                border:5px ridge rgb(12, 96, 206);
+                margin:1%;
+                border-radius:20px
+            }
+
+            p{
+                font-size:10vw;
+              
+                font-weight: bold;
+            }
+
+           
+
+            #nextbtn, #backbtn, #newbtn{
+                width: 25%;
+                font-size:20px;
+                margin-right: 5%;
+                position: relative;
+                
+            }
+
+            #backbtn, #newbtn{
+                display:none;
+            }
+
+            #family{
+                width:95%;
+                height:95%;
+            }
+
+            #about{
+                font-weight: bold;
+                font-size:40px;
+                color:rgb(7, 7, 89)
+            }
+
+            #story{ 
+                font-size: 1.25vw;
+                border-radius: 20px;
+            }
+
+            #imgdiv{
+                position:relative;
+            }
+         
+        
+        </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>
+        <br>
+        
+        <center>
+            <h2 id="about">Adverbs and their types.</h2>
+            <div class="maindiv container-fluid" style="height:60%;">
+            <center>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv">
+                <img id="family" src="2.jpg" style="width:100%;"> 
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11"  id='storydiv'>
+                <p id="story" style="text-align:left; width:100%;">
+
+                    In the previous two classes we studied altogether four types of verbs namely:
+                    Transitive, Intransitive, Ditransitive and Linking verbs. <br> <br>
+
+            <span style="color: blue;">  Do you know just like Adjectives modify/describe/define nouns there are words which
+                    define/modify/describe Verbs? <br> 
+                    They are called Adverbs. ADVERBS modifies the following: <br>
+                    ● VERBS <br>
+                    ● ADJECTIVES <br>
+                    ● ANOTHER ADVERB <br> <br>
+
+                    </span>
+
+
+                    Before we explore Adverbs and their types today, let us read a conversation between Daisy and Dora.
+                 
+     
+                      
+                  
+                </p>     
+            </div>
+        </center>
+        </div>
+        <br>
+        <div class="" style="text-align:center; padding-top:1%">
+            
+            <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+            <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+            <button id="newbtn" onclick="newpage()" class="btn btn-success">Next</button>
+            
+  
+        </div>
+    
+
+        </center>   
+
+        <script>
+
+            var images = ["Assets/1.jpg", "Assets/2.jpg", "Assets/3.jpg", "Assets/4.jpg", "Assets/5.jpg", "Assets/6.jpg", "Assets/7.jpg", "Assets/8.jpg", "Assets/9.jpg", "Assets/10.jpg", "Assets/11.jpg", "Assets/12.jpg", "Assets/13.jpg"];
+            var para=["It was one month before Christmas eve in the busiest city of Auckland. Schools were still open. Two girls Dora and Daisy were sitting on either side of the road waiting for their school bus. It's been 15 days since Daisy has shifted to the neighbourhood closest to Dora’s. Till now their bonding has not moved an inch beyond smiling at each other, followed by waving and appreciating each other’s presence from a distance.",
+
+                      "One day Dora’s school bus arrived before Daisy’s. Daisy was surprised to see Dora crying while getting in. It affected Daisy and she thought about Dora's condition all day in school. Daisy decided to talk to Dora. After school, their school buses dropped them at the same time. Daisy crossed the road, followed Dora and called out to her:",
+
+                      " <span style='font-weight: bolder;background-color: blueviolet;color: white;'> DAISY:</span> Hey! Hi. <br><br> <span style='font-weight: bolder;background-color: blueviolet;color: white;'> DORA: </span> Hi (Sadly) <br> <br> <span style='font-weight: bolder;background-color: blueviolet;color: white;'> DAISY: </span> My name is Daisy, and yours? <br><br> <span style='font-weight: bolder;background-color: blueviolet;color: white;'> DORA: </span> I am Dora, nice to meet you Daisy. Aren’t you the new resident from the next neighbourhood? <br><br> <span style='font-weight: bolder;background-color: blueviolet;color: white;'> DAISY: </span> Yes I am. Is everything all right Dora ? <br> <br>  <span style='font-weight: bolder;background-color: blueviolet;color: white;'> DORA: </span> Why?",
+
+                      "<i>Pointing at the bus stop Daisy said:</i> <br> <br> <span style='font-weight: bolder;background-color: blueviolet;color: white;'> DAISY:</span> Today I saw you there crying in the morning. You didn’t smile at me or wave back at me. <br> <br> <span style='font-weight: bolder;background-color: blueviolet;color: white;'> DORA: </span> Oh dear, oh dear, I cannot find my cat since Sunday. It was sick and weak. I don’t know where he is. The cat was the last gift from my grandmother.",
+
+                      "<img  class='img-responsive' src='5th.jpg' style='width: 100%;' alt=''> ",
+
+                      "<img  class='img-responsive' src='6th.jpg' style='width: 100%;' alt=''> ",
+
+                      " <span style='font-weight: bolder;background-color: blueviolet;color: white;'>DAISY: </span> Do you want me to help you find your cat?<br> <br>  <span style='font-weight: bolder;background-color: blueviolet;color: white;'> DORA: </span> My cat never leaves the house when he is unwell. He either sits in one corner of his room or sits in one corner of the front yard. So, I don’t know where to find him. We frantically searched for him.  Anyways, thank you for asking Daisy. It was really kind of you.",
+
+                      "<img  class='img-responsive' src='8th.jpg' style='width: 100%;' alt=''>",
+
+                    
+
+                     
+
+                    
+
+                      
+                    ]
+            
+            
+            var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("newbtn").style.display="inline-block"
+                    document.getElementById("story").style.fontSize="22px"
+                    document.getElementById("about").innerHTML = "DICUSSION";
+                    document.getElementById("story").innerHTML = "<img class='img-responsive' src='9th.jpg' style='width: 100%;' alt=''>"
+                    document.getElementById("family").src = "last.jpg";
+                    document.getElementById("family").src = "last part.jpg";
+                   
+                   
+
+                    
+                }
+                else{
+                    document.getElementById("story").style.fontSize="20px"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="Found a friend and a cat!"
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+            function newpage(){
+                window.location="ac2.html"
+            }
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="20px"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "2.jpg";
+                    document.getElementById("about").innerHTML="Adverbs and their types"
+                    document.getElementById("story").innerHTML = 'In the previous two classes we studied altogether four types of verbs namely: Transitive, Intransitive, Ditransitive and Linking verbs. <br><br> <span style="color: blue;">  Do you know just like Adjectives modify/describe/define nouns there are words which define/modify/describe Verbs? <br> They are called Adverbs. ADVERBS modifies the following: <br> ● VERBS <br> ● ADJECTIVES <br> ● ANOTHER ADVERB <br> <br> </span> Before we explore Adverbs and their types today, let us read a conversation between Daisy and Dora.';
+                }
+                else{
+                document.getElementById("story").style.fontSize="22px"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                document.getElementById("about").innerHTML="Found a friend and a cat!"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
